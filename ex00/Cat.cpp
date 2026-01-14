@@ -4,6 +4,7 @@
 Cat::Cat()
 {
     std::cout << "Cat    - Constructor" << std::endl;
+    this->type = "Cat";
 };
 
 Cat::~Cat()
@@ -21,4 +22,9 @@ Cat &Cat::operator=(const Cat &src)
     std::cout << "Cat - Copy Assignment" << std::endl;
     this->type = src.type;
     return (*this);
+};
+
+void Cat::makeSound() const
+{
+    std::cout << "Dog - sound..." << std::endl;
 };

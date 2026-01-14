@@ -1,7 +1,7 @@
 
 #include "Animal.hpp"
 
-Animal::Animal()
+Animal::Animal() : type("Animal")
 {
     std::cout << "Animal - Constructor" << std::endl;
 };
@@ -22,3 +22,13 @@ Animal &Animal::operator=(const Animal &src)
     this->type = src.type;
     return (*this);
 };
+
+std::string Animal::getType() const
+{
+    return (this->type);
+}
+
+void Animal::makeSound() const
+{
+    std::cout << "Animal - sound..." << std::endl;
+}
