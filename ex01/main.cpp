@@ -5,8 +5,7 @@
 
 int main()
 {
-    std::cout << "=== Correct Animal ===" << std::endl;
-    
+    std::cout << "=== Correct Animal Test ===" << std::endl;
     const Animal* meta = new Animal();
     const Animal* j = new Dog();
     const Animal* i = new Cat();
@@ -24,8 +23,7 @@ int main()
 
     std::cout << std::endl;
 
-    std::cout << "=== Wrong Animal ===" << std::endl;
-
+    std::cout << "=== Wrong Animal Test ===" << std::endl;
     const WrongAnimal* wrongMeta = new WrongAnimal();
     const WrongAnimal* wrongCat = new WrongCat();
     std::cout << wrongCat->getType() << " " << std::endl;
