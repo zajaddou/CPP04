@@ -5,36 +5,49 @@
 
 int main()
 {
-    std::cout << "=== Correct Animal ===" << std::endl;
+    std::cout << "\n=== Correct Animal ===\n" << std::endl;
     
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-
-    i->makeSound();
-    j->makeSound();
-    meta->makeSound();
-
-    delete meta;
-    delete j;
-    delete i;
+    const Animal *a = new Dog();
+    const Animal *b = new Cat();
+    const Animal *c = new Animal();
 
     std::cout << std::endl;
 
-    std::cout << "=== Wrong Animal ===" << std::endl;
+    std::cout << "Type   : " << a->getType() << std::endl;
+    std::cout << "Type   : " << b->getType() << std::endl;
 
-    const WrongAnimal* wrongMeta = new WrongAnimal();
-    const WrongAnimal* wrongCat = new WrongCat();
-    std::cout << wrongCat->getType() << " " << std::endl;
+    std::cout << std::endl;
 
-    wrongCat->makeSound(); 
-    wrongMeta->makeSound();
+    a->makeSound();
+    b->makeSound();
+    c->makeSound();
 
-    delete wrongMeta;
-    delete wrongCat;
+    std::cout << std::endl;
 
-    return 0;
+    delete a;
+    delete b;
+    delete c;
+
+
+    std::cout << "\n=== Wrong Animal ===\n" << std::endl;
+
+    const WrongAnimal *d = new WrongCat();
+    const WrongAnimal *e = new WrongAnimal();
+
+    std::cout << std::endl;
+
+    std::cout << "Type        : " << d->getType() << std::endl;
+    std::cout << "Type        : " << e->getType() << std::endl;
+
+    std::cout << std::endl;
+
+    d->makeSound(); 
+    e->makeSound();
+
+    std::cout << std::endl;
+
+    delete d;
+    delete e;
+
+    return (0);
 }

@@ -3,7 +3,7 @@
 
 WrongCat::WrongCat()
 {
-    std::cout << "WrongCat    - Constructor" << std::endl;
+    std::cout << "WrongCat    - Constructor\n" << std::endl;
     this->type = "WrongCat";
 };
 
@@ -26,5 +26,5 @@ WrongCat &WrongCat::operator=(const WrongCat &src)
 
 void WrongCat::makeSound() const
 {
-    std::cout << "WrongCat - sound..." << std::endl;
+    std::cout << "WrongCat : Meow meow!" << std::endl;
 };

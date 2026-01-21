@@ -3,7 +3,7 @@
 
 Cat::Cat()
 {
-    std::cout << "Cat    - Constructor" << std::endl;
+    std::cout << "Cat    - Constructor\n" << std::endl;
     this->type = "Cat";
 };
 
@@ -26,5 +26,5 @@ Cat &Cat::operator=(const Cat &src)
 
 void Cat::makeSound() const
 {
-    std::cout << "Cat    - sound..." << std::endl;
+    std::cout << "Cat    : Meow meow!" << std::endl;
 };

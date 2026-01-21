@@ -15,7 +15,7 @@ class Dog : public Animal
         ~Dog();
         void makeSound() const;
     private:
-        Brain* brain;
+        Brain *brain;
 };
 
 #endif

@@ -3,7 +3,7 @@
 
 Dog::Dog()
 {
-    std::cout << "Dog    - Constructor" << std::endl;
+    std::cout << "Dog    - Constructor\n" << std::endl;
     this->type = "Dog";
 };
 
@@ -27,5 +27,5 @@ Dog &Dog::operator=(const Dog &src)
 
 void Dog::makeSound() const
 {
-    std::cout << "Dog    - sound..." << std::endl;
+    std::cout << "Dog    : Woof woof!" << std::endl;
 };

@@ -14,17 +14,17 @@ WrongCat::~WrongCat()
 
 WrongCat::WrongCat(const WrongCat &src) : WrongAnimal(src)
 {
-    std::cout << "WrongCat - Copy Constructor" << std::endl;
+    std::cout << "WrongCat    - Copy Constructor" << std::endl;
 };
 
 WrongCat &WrongCat::operator=(const WrongCat &src)
 {
-    std::cout << "WrongCat - Copy Assignment" << std::endl;
+    std::cout << "WrongCat    - Copy Assignment" << std::endl;
     this->type = src.type;
     return (*this);
 };
 
 void WrongCat::makeSound() const
 {
-    std::cout << "WrongCat - sound..." << std::endl;
+    std::cout << "WrongCat    : Meow meow!" << std::endl;
 };
