@@ -8,7 +8,7 @@ Animal::Animal() : type("Animal")
 
 Animal::~Animal()
 {
-    std::cout << "Animal - Destructor" << std::endl;
+    std::cout << "Animal - Destructor\n" << std::endl;
 };
 
 Animal::Animal(const Animal &src) : type(src.type)

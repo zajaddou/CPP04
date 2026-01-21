@@ -1,26 +1,29 @@
 
 #include "Dog.hpp"
 
-Dog::Dog()
+Dog::Dog() : brain(new Brain())
 {
-    std::cout << "Dog    - Constructor" << std::endl;
-    this->type = "Dog";
+    std::cout << "Dog    - Constructor\n" << std::endl;
+    type = "Dog";
+};
+
+Dog::Dog(const Dog &src) : Animal(src), brain(new Brain())
+{
+    std::cout << "Dog    - Copy Constructor" << std::endl;
+    *brain = *src.brain;
 };
 
 Dog::~Dog()
 {
     std::cout << "Dog    - Destructor" << std::endl;
-};
-
-Dog::Dog(const Dog &src) : Animal(src)
-{
-    std::cout << "Dog - Copy Constructor" << std::endl;
+    delete brain;
 };
 
 Dog &Dog::operator=(const Dog &src)
 {
-    std::cout << "Dog - Copy Assignment" << std::endl;
-    this->type = src.type;
+    std::cout << "Dog    - Copy Assignment" << std::endl;
+    type = src.type;
+    *brain = *src.brain;
     return (*this);
 };
 

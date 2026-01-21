@@ -6,14 +6,14 @@
 #    By: zajaddou <zajaddou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/01/10 14:16:13 by zajaddou          #+#    #+#              #
-#    Updated: 2026/01/13 10:57:17 by zajaddou         ###   ########.fr        #
+#    Updated: 2026/01/21 16:21:16 by zajaddou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= Animal
 
 CC			= c++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98
+CXXFLAGS	= -std=c++98
 
 SRCS		= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 OBJS		= $(SRCS:.cpp=.o)
