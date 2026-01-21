@@ -22,8 +22,11 @@ Dog::~Dog()
 Dog &Dog::operator=(const Dog &src)
 {
     std::cout << "Dog    - Copy Assignment" << std::endl;
-    type = src.type;
-    *brain = *src.brain;
+    if (this != &src)
+    {
+        type = src.type;
+        *brain = *src.brain;
+    }
     return (*this);
 };
 

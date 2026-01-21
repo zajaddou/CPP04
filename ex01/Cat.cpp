@@ -22,8 +22,11 @@ Cat::~Cat()
 Cat &Cat::operator=(const Cat &src)
 {
     std::cout << "Cat    - Copy Assignment" << std::endl;
-    type = src.type;
-    *brain = *src.brain;
+    if (this != &src)
+    {
+        type = src.type;
+        *brain = *src.brain;
+    }
     return (*this);
 };
 
