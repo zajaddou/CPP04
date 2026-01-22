@@ -4,8 +4,6 @@
 
 int main()
 {
-    std::cout << "\n=== Animal List ===\n" << std::endl;
-
     Animal *list[100];
 
     for (int i = 0; i < 50; i++)
@@ -16,6 +14,13 @@ int main()
 
     for (int i = 0; i < 100; i++)
         delete list[i];
+
+    std::cout << "\n=== Deep Copy Test ===\n" << std::endl;
+
+    Dog basic;
+    {
+        Dog tmp = basic;
+    }
 
     return (0);
 }
