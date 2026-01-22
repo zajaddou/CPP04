@@ -1,3 +1,4 @@
+
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
@@ -20,6 +21,13 @@ int main()
 
     delete a;
     delete b;
+
+    std::cout << "\n=== Deep Copy Test ===\n" << std::endl;
+    
+    Dog basic;
+    {
+        Dog tmp = basic;
+    }
 
     return (0);
 }
